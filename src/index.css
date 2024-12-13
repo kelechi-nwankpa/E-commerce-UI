@@ -4,9 +4,6 @@
   font-style: normal;
   line-height: 1.5;
 
-
- 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,29 +11,20 @@
 }
 
 a {
- 
 }
 a:hover {
-  
 }
 
 body {
-  
 }
 
 h1 {
-  
 }
 
 button {
-  
 }
 button:hover {
-
 }
 button:focus,
 button:focus-visible {
-  
 }
-
-

@@ -35,6 +35,38 @@ function cartReducer(state, action) {
         cart: newCart,
       };
     }
+    case "INCREMENT_QUANTITY": {
+      const item = state.cart[action.payload.id];
+      if (item) {
+        return {
+          ...state,
+          cart: {
+            ...state.cart,
+            [action.payload.id]: {
+              ...item,
+              qty: item.qty + 1,
+            },
+          },
+        };
+      }
+      return state;
+    }
+    case "DECREMENT_QUANTITY": {
+      const item = state.cart[action.payload.id];
+      if (item && item.qty > 1) {
+        return {
+          ...state,
+          cart: {
+            ...state.cart,
+            [action.payload.id]: {
+              ...item,
+              qty: item.qty - 1,
+            },
+          },
+        };
+      }
+      return state;
+    }
     default:
       return state;
   }
